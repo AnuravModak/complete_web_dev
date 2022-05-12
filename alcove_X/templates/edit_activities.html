@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Document</title>
+</head>
+<body>
+        <nav class="grey darken-3">
+    <div class="nav-wrapper container">
+
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger show-on-large"><i class="fas fa-bars"></i></a>
+        <ul class="sidenav" id="mobile-demo">
+
+             <li><a href="/mydashboard">Dashboard</a></li>
+            <li><a href="/users/get_activity">ACtivities</a></li>
+            <li><a href="/direct_add_todolist">Add To Do list</a></li>
+            <li><a href="/users/redirect_delete">Delete activities</a></li>
+            <li><a href="/users/redirect_edit">Edit activities</a></li>
+            <li><a href="/users/edit">Edit details</a></li>
+            <li><a href="/users/delete">Delete My Account</a></li>
+            <li><a href="/users/logout">Logout</a></li>
+        </ul>
+    </div>
+</nav>
+    <div class="container">
+        <h1>Edit your activities</h1>
+
+        <div>
+
+
+
+
+ <form action="/users/edit_activity" method="POST" >
+
+  <div class="form-group row">
+    <label for="name" class="col-sm-2 col-form-label">Enter the name of the activity</label>
+    <div class="col-sm-10">
+      <input
+              type="text"
+              id="name"
+              name="name"
+              class="form-control"
+              placeholder="name of the activity"
+              required
+            />
+    </div>
+  </div>
+
+     <div class="form-group row">
+    <label for="nname" class="col-sm-2 col-form-label">Enter the new name of the activity</label>
+    <div class="col-sm-10">
+      <input
+              type="text"
+              id="nname"
+              name="nname"
+              class="form-control"
+              placeholder="name of the activity"
+
+            />
+    </div>
+  </div>
+
+     <div class="form-group row">
+    <label for="status" class="col-sm-2 col-form-label">Enter new status</label>
+    <div class="col-sm-10">
+      <input
+              type="text"
+              id="status"
+              name="status"
+              class="form-control"
+              placeholder="Enter new status"
+            />
+    </div>
+  </div>
+
+     <div class="form-group row">
+    <label for="notes" class="col-sm-2 col-form-label">Enter new notes</label>
+    <div class="col-sm-10">
+      <input
+              type="text"
+              id="notes"
+              name="notes"
+              class="form-control"
+              placeholder="Enter new notes"
+            />
+    </div>
+  </div>
+
+
+
+  <button type="submit" class="btn btn-primary btn-block">
+    Update
+  </button>
+</form>
+</div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <script>
+        M.Sidenav.init(document.querySelector('.sidenav'));
+    </script>
+
+
+
+
+</script>
+
+</body>
+</html>

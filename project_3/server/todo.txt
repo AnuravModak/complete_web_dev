@@ -1,0 +1,33 @@
+VIEWS:
+
+1) For all the routes like /login,/register you need to have layouts with respective names
+like i have done in "VIEWS"
+2) Comments doesnot work in ejs.
+3)"<p class="lead mb-3">Welcome <%= user.name %></p>" this is how i am gonna access user's name by creating a user object.
+
+register"
+1) value="<%= typeof name != 'undefined' ? name : '' %>"...now this will make sure that while registering u do something wrong and submits the form....ur filled fields wont get empty...that is u dont need to fill those fields again....
+
+
+
+ROUTES:
+1)users
+    a) const {name,email,password,password2}=req.body;
+    this is how you pull out all the data form req.body just use ===> const { }=req.body; and variables according to ur need.
+    b) Now i am not usin express-generator....here in my app.js i dont have error handler....either you can add it and work according to it
+    or you can use express.generator to do the same...and how to send errors......refer
+    b) after logging out you may again go to same page without logging in...so for that u will use auth.js in config file 
+
+
+
+
+
+
+PARTIALS:
+it is a piece of markup...or HTML
+"<%= " this tag will help u to directly put information from object in web page
+
+
+PASSPORT:
+now to authenticate a user, we will require password entered by user and hashed password stored in database............
+we will use bcryptjs.compare(password,user.password,callback(err,boolean))......if matched boolean will have true else false......
